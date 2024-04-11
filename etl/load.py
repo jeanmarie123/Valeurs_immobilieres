@@ -10,3 +10,5 @@ def load_data(estate_df, table_name):
     """
     con.execute(f"CREATE TABLE IF NOT EXISTS '{table_name}' AS SELECT * FROM estate_df ")
 
+    print(f"Data is load correctly in table : {table_name}.")
+

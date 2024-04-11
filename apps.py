@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from workflow.pipeline import run_pipeline
+from workflow.manip import *
 import os 
 import warnings
 warnings.filterwarnings('ignore')
@@ -17,10 +17,10 @@ tab1, tab2 = st.tabs(["Cat", "Dog"])
 with tab1:
     input_text = st.text_area(label = "entrez votre input")
     st.write(input_text)
-    st.dataframe(df)
+    st.dataframe(data())
 
 
 with tab2:
     input_v = st.text_area(label = "entrez votre code")
     st.write(input_v)
-    st.dataframe(df)
+    st.dataframe(data())

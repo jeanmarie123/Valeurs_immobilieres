@@ -1,9 +1,9 @@
 #
-from etl.extract import*
+import yaml
+from etl.extract import *
 from etl.transform import transform_data
 from etl.load import load_data
 
-import yaml
 
 # import pipiline configuration
 with open('config.yaml', 'r') as file:
@@ -23,3 +23,6 @@ def run_pipeline():
     # step 3 load data in databese duckdb
     load_data(df_imo_t, 'immo_france')
     load_data(df_dpt, 'zone_geographique')
+
+if __name__ == "__main__":
+    run_pipeline()

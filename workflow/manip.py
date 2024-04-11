@@ -1,5 +1,10 @@
+
 import duckdb 
-from workflow.pipeline import run_pipeline
+import pandas
 
-run_pipeline()
+con = duckdb.connect(database = "data/real_estate.db", read_only = False)
 
+def data():
+    with duckdb.connect(database = "data/real_estate.db", read_only = False) as con:
+       df_data = con.execute("SELECT * FROM zone_geographique").df()
+    return df_data 
