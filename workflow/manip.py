@@ -2,7 +2,7 @@
 import duckdb 
 import pandas
 
-con = duckdb.connect(database = "data/real_estate.db", read_only = False)
+#con = duckdb.connect(database = "data/real_estate.db", read_only = False)
 
 def data():
     with duckdb.connect(database = "data/real_estate.db", read_only = False) as con:
