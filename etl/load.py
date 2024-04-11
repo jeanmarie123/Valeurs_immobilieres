@@ -1,7 +1,7 @@
 import duckdb
 
 # create the connexion to a database (our database is file that we called real_estate.db)
-con = duckdb.connect(database = "data/real_estate.db", read_only = False)
+con = duckdb.connect(database = "database/real_estate.db", read_only = False)
 
 def load_data(estate_df, table_name):
     """
