@@ -30,4 +30,6 @@ def transform_data(estate_df : object):
     # rename columns
     estate_df = estate_df.rename(columns = col_rename)
 
+    print("The process is transformation is finish")
+
     return estate_df 
