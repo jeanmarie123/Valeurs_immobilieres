@@ -20,3 +20,4 @@ df_fimo = con.execute("""
                         FROM immo_france
                       """
                       ).df()
+

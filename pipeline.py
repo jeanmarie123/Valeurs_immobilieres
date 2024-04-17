@@ -15,7 +15,7 @@ def run_pipeline():
     """
     # step 1 extract data
     df_imo = extraction_data(config_data['real_estate'], config_data['select_col'])
-    df_dpt = extract_data_dpt(config_data['france_dept'])
+    df_dpt = extract_data_dpt(config_data['france_dept']) 
 
     # step 2 transform data
     df_imo_t = transform_data(df_imo) 
