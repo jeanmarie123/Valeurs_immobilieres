@@ -18,7 +18,7 @@ def run_pipeline():
     df_dpt = extract_data_dpt(config_data['france_dept'])
 
     # step 2 transform data
-    df_imo_t = transform_data(df_imo)
+    df_imo_t = transform_data(df_imo) 
 
     # step 3 load data in databese duckdb
     load_data(df_imo_t, 'immo_france')
